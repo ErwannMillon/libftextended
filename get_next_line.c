@@ -6,11 +6,12 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 04:23:06 by gmillon           #+#    #+#             */
-/*   Updated: 2022/04/07 00:31:04 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/04/07 00:41:41 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "libft.h"
 
 int	end_of_substr(int bytes_read, int nl)
 {

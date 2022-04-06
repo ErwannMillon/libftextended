@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-char	*buf_alloc(char *old, int buff_size)
+char	*buffer_realloc(char *old, int buff_size)
 {
 	char		*new;
 	static int	size = 1;

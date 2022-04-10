@@ -6,21 +6,21 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 04:23:11 by gmillon           #+#    #+#             */
-/*   Updated: 2022/04/07 00:30:28 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/04/10 04:59:34 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-// int	ft_strlen(char *s)
-// {
-// 	int	i;
+int	ft_slen(char *s)
+{
+	int	i;
 
-// 	i = 0;
-// 	while (s[i] && (s[i] != EOF))
-// 		i++;
-// 	return (i);
-// }
+	i = 0;
+	while (s[i] && (s[i] != EOF))
+		i++;
+	return (i);
+}
 
 char	*buf_alloc(char *old)
 {

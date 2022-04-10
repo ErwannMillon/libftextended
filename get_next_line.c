@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 04:23:06 by gmillon           #+#    #+#             */
-/*   Updated: 2022/04/07 00:41:41 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/04/10 05:01:55 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*seek_loop(int fd, int *b_read, char **bigbuff, char **buff)
 		if (nl >= 0)
 		{
 			res = ft_substr_free(*bigbuff, 0, nl + 1, 0);
-			*bigbuff = ft_substr_free(*bigbuff, nl + 1, ft_strlen(*bigbuff), 1);
+			*bigbuff = ft_substr_free(*bigbuff, nl + 1, ft_slen(*bigbuff), 1);
 			return (res);
 		}
 		*bigbuff = buf_alloc(*bigbuff);
@@ -111,32 +111,32 @@ char	*get_next_line(int fd)
 	return (0);
 }
 
-int main(void)
-{
-	int file = open("test1", O_RDONLY);
-	int file2 = open("test2", O_RDONLY);
+// int main(void)
+// {
+// 	int file = open("test1", O_RDONLY);
+// 	int file2 = open("test2", O_RDONLY);
 
-	printf("result: _%s\n", get_next_line(file));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s\n", get_next_line(file));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
-	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s\n", get_next_line(file));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s\n", get_next_line(file));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
+// 	printf("result: _%s", get_next_line(file));
 
-	printf("\nnewfile\n");
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
-	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("\nnewfile\n");
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
+// 	printf("result: _%s_\n", get_next_line(file2));
 
-}
+// }

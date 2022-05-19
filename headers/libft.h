@@ -6,13 +6,14 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:10:44 by gmillon           #+#    #+#             */
-/*   Updated: 2022/04/06 21:41:30 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/05/19 13:56:19 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -20,6 +21,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+int		*ft_bubblesort(int *tab, int size);
 char	*buffer_realloc(char *old, int buff_size);
 char	*get_next_line(int fd);
 void	ft_lstclear(t_list **lst, void (*del)(void *));

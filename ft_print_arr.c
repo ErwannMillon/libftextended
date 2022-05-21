@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_print_arr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 18:36:18 by gmillon           #+#    #+#             */
-/*   Updated: 2022/05/19 22:36:56 by gmillon          ###   ########.fr       */
+/*   Created: 2022/03/21 12:33:31 by gmillon           #+#    #+#             */
+/*   Updated: 2022/05/20 13:11:23 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_print_arr(int *arr, int size)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
+	int	i;
+
+	i = 0;
+	while (i < size)
 	{
-		lst = lst->next;
+		ft_printf("%d ", arr[i]);
+		i++;
 	}
-	return (lst);
+	ft_printf("\n");
 }

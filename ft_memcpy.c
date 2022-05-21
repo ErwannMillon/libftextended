@@ -6,11 +6,31 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:33:26 by gmillon           #+#    #+#             */
-/*   Updated: 2022/03/31 15:15:54 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/05/20 17:35:52 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+
+void	*ft_memcpy_alloc(void *dest, const void *src, size_t n)
+{
+	size_t		i;
+	char		*destcast;
+	char		*srccast;
+
+	dest = malloc(n + 1);
+	destcast = (char *)dest;
+	srccast = (char *)src;
+	i = 0;
+	while (src && dest && i < n)
+	{
+		*destcast = *srccast;
+		destcast++;
+		srccast++;
+		i++;
+	}
+	return (dest);
+}
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

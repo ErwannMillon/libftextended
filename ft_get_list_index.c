@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_get_list_index.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 18:36:18 by gmillon           #+#    #+#             */
-/*   Updated: 2022/05/19 22:36:56 by gmillon          ###   ########.fr       */
+/*   Created: 2022/03/21 12:32:44 by gmillon           #+#    #+#             */
+/*   Updated: 2022/05/20 15:12:25 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list	*ft_lstlast(t_list *lst)
+int	ft_get_arr_index(int search, int *arr, int size)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
+	int	i;
+
+	i = 0;
+	while (i < size)
 	{
-		lst = lst->next;
+		if (arr[i] == search)
+			return (i);
+		i++;
 	}
-	return (lst);
+	return (-1);
 }
+

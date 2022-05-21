@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:10:44 by gmillon           #+#    #+#             */
-/*   Updated: 2022/05/20 15:12:40 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/05/22 01:32:53 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int		ft_isupper(int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memset(void *dest, int c, size_t len);
 int		ft_memcmp(const void *p1, const void *p2, size_t size);
+void	*ft_memcpy_alloc(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strchr(const char *str, int c);
 int		ft_strlen(const char *s);

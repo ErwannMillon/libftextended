@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:10:44 by gmillon           #+#    #+#             */
-/*   Updated: 2022/05/22 01:38:56 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/07/12 22:38:39 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+void	ft_print_str_arr(char **arr);
+char	**double_pointer_realloc(char *old, int new_size);
 int		ft_get_arr_index(int search, int *arr, int size);
 void	ft_print_arr(int *arr, int size);
 void	ft_bubble_sort(int *tab, int size);

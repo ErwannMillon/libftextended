@@ -6,12 +6,23 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:40:37 by gmillon           #+#    #+#             */
-/*   Updated: 2022/03/25 19:09:30 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/07/13 00:03:45 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
+
+static int arr_len(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+		i++;
+	return (i);
+}
 
 static int	ft_strcpy_reti(char *dest, const char *src)
 {
@@ -27,6 +38,33 @@ static int	ft_strcpy_reti(char *dest, const char *src)
 	}
 	dest[i] = 0;
 	return (i);
+}
+
+char	*ft_join_arr_by_str(char **arr, char *str_delimiter)
+{
+	int		i;
+	int		total_len;
+	char	*str;
+	
+	i = 0;
+	total_len = 0;
+	while (arr[i])
+	{
+		total_len += ft_strlen(arr[i]);
+		i++;
+	}
+	str = malloc(total_len + arr_len(arr) + 2);
+	str[0] = 0;
+	i = 0;
+	ft_strncat(str, str_delimiter, 1);
+	while (arr[i])
+	{
+		ft_strncat(str, arr[i], ft_strlen(arr[i]));
+		if (arr[i + 1])
+			ft_strncat(str, str_delimiter, 1);
+		i++;
+	}
+	return (str);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)

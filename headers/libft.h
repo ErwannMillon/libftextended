@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:10:44 by gmillon           #+#    #+#             */
-/*   Updated: 2022/07/12 22:38:39 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/07/12 23:25:38 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ typedef struct s_list
 }	t_list;
 
 void	ft_print_str_arr(char **arr);
-char	**double_pointer_realloc(char *old, int new_size);
+char	*ft_join_arr_by_str(char **arr, char *str_delimiter);
+char	**double_pointer_realloc(char **old, int new_size);
 int		ft_get_arr_index(int search, int *arr, int size);
 void	ft_print_arr(int *arr, int size);
 void	ft_bubble_sort(int *tab, int size);
@@ -47,6 +48,7 @@ void	*ft_memcpy_alloc(const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strchr(const char *str, int c);
 int		ft_strlen(const char *s);
+char	*ft_strncat(char *dest, char *src, int n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(char *str, char *to_find, size_t n);
 char	*ft_strrchr(char *str, int c);

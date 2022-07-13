@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:35:47 by gmillon           #+#    #+#             */
-/*   Updated: 2022/03/25 18:41:55 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/07/13 06:06:33 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ char	*ft_strnstr(char *str, char *to_find, size_t n)
 {
 	size_t	i;
 	size_t	k;
-	size_t	match;
 
-	match = 0;
 	i = 0;
 	k = 0;
 	if (to_find[0] == 0)

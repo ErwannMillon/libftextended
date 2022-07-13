@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 23:07:37 by gmillon           #+#    #+#             */
-/*   Updated: 2022/04/05 18:28:42 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/07/13 06:04:31 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 char	str_seek(char *str)
 {
 	static int	i = 0;
-	int			len;
 
-	len = 0;
 	while (str[i] && str[i] != '%')
 	{
 		write(1, &str[i], 1);

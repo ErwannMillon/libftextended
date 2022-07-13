@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 23:07:48 by gmillon           #+#    #+#             */
-/*   Updated: 2022/04/05 18:43:00 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/07/13 01:07:49 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,6 @@
 #include "ft_printf.h"
 #include <unistd.h>
 #include <limits.h>
-
-static char	*ft_strncat(char *dest, char *src, int n)
-{
-	int	i;
-	int	j;
-
-	j = 0;
-	i = 0;
-	while (dest[i])
-		i++;
-	while (src[j] && j < n)
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = 0;
-	return (dest);
-}
 
 static char	*ft_strrev(char *s)
 {

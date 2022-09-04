@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:35:00 by gmillon           #+#    #+#             */
-/*   Updated: 2022/03/25 18:34:56 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/09/04 12:13:09 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,15 @@ int	ft_isdigit(char c)
 	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
+}
+
+int ft_string_is_num(char *str)
+{
+	while (*str)
+	{
+		if (!ft_isdigit(*str)) 
+			return (0);
+		str++;
+	}
+	return (1);
 }

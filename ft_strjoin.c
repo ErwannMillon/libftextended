@@ -6,15 +6,14 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:40:37 by gmillon           #+#    #+#             */
-/*   Updated: 2022/07/13 06:03:38 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/09/07 14:46:33 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-
-static int arr_len(char **arr)
+static int	arr_len(char **arr)
 {
 	int	i;
 
@@ -43,7 +42,7 @@ char	*ft_join_arr_by_str(char **arr, char *str_delimiter)
 	int		i;
 	int		total_len;
 	char	*str;
-	
+
 	i = 0;
 	total_len = 0;
 	while (arr[i])

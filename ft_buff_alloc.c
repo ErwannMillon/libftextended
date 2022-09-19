@@ -6,11 +6,11 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:46:26 by gmillon           #+#    #+#             */
-/*   Updated: 2022/09/07 14:46:27 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/09/19 19:52:54 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h
+#include <stdlib.h>
 
 char	**double_pointer_realloc(char **old, int new_size)
 {

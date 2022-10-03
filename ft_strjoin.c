@@ -6,14 +6,14 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:40:37 by gmillon           #+#    #+#             */
-/*   Updated: 2022/09/07 14:46:33 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/03 21:49:10 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	arr_len(char **arr)
+int	arr_len(char **arr)
 {
 	int	i;
 

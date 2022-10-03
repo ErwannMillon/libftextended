@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:33:15 by gmillon           #+#    #+#             */
-/*   Updated: 2022/02/08 02:33:16 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/03 21:49:40 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(char *src)
 	char	*dup;
 
 	i = 0;
-	while (src[i])
+	while (src && src[i])
 		i++;
 	dup = malloc(i + 1);
 	if (dup == NULL)

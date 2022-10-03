@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:10:44 by gmillon           #+#    #+#             */
-/*   Updated: 2022/09/04 12:13:59 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/03 21:48:49 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+
+char	*ft_realloc(void *old, size_t buff_size);
 void	ft_print_str_arr(char **arr);
+int		arr_len(char **arr);
+char	**str_arg_split(char const *s, char c);
 char	*ft_join_arr_by_str(char **arr, char *str_delimiter);
 char	**double_pointer_realloc(char **old, int new_size);
 int		ft_string_is_num(char *str);

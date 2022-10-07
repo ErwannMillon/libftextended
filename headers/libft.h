@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:10:44 by gmillon           #+#    #+#             */
-/*   Updated: 2022/10/03 21:48:49 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/07 23:47:28 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
 
 char	*ft_realloc(void *old, size_t buff_size);
 void	ft_print_str_arr(char **arr);
@@ -63,6 +62,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strdup(char *src);
 void	*ft_memmove(void *dest, const void *src, size_t len);
+void	*ft_memmove_free(void *dest, void *src, size_t len);
+int		ft_strchr_index(char *str, int c);
 int		ft_atoi(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);

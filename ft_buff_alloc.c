@@ -6,11 +6,11 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:46:26 by gmillon           #+#    #+#             */
-/*   Updated: 2022/10/03 21:44:35 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/10 03:20:25 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	**double_pointer_realloc(char **old, int new_size)
 {
@@ -31,23 +31,23 @@ char	**double_pointer_realloc(char **old, int new_size)
 	return (new);
 }
 
-char	*ft_realloc(void *old, size_t buff_size)
+void	*ft_realloc(void *old, size_t old_size, size_t new_size)
 {
-	char		*new;
+	void		*new;
 	int			i;
 
 	i = 0;
-	new = malloc(buff_size + 1);
+	new = malloc(new_size + 1);
 	if (!new)
 		return (NULL);
 	while (((char *)old)[i])
 	{
-		new[i] = ((char *)old)[i];
+		((char *)new)[i] = ((char *)old)[i];
 		i++;
 	}
-	new[i] = 0;
+	ft_memcpy(new, old, old_size);
 	free(old);
-	return (new);
+	return ((void *)new);
 }
 
 char	*buffer_realloc(char *old, int buff_size)

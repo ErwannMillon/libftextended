@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:32:43 by gmillon           #+#    #+#             */
-/*   Updated: 2022/03/25 18:34:03 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/10 03:00:10 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,20 @@ char	**ft_split(char const *s, char c)
 	}
 	result[count] = NULL;
 	return (result);
+}
+
+char	**ft_copy_split(char **arr)
+{
+	char		**copy;
+	int			i;
+
+	i = 0;
+	copy = malloc((arr_len(arr) + 1) * sizeof(char *));
+	while (arr[i])
+	{
+		copy[i] = ft_strdup(arr[i]);
+		i++;
+	}
+	copy[i] = 0;
+	return (copy);
 }

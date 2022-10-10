@@ -6,7 +6,7 @@
 /*   By: gmillon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:40:37 by gmillon           #+#    #+#             */
-/*   Updated: 2022/10/03 21:49:10 by gmillon          ###   ########.fr       */
+/*   Updated: 2022/10/10 03:59:29 by gmillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_strcpy_reti(char *dest, const char *src)
 	int		i;
 
 	i = 0;
-	while (src[i])
+	while (src && src[i])
 	{
 		dest[i] = src[i];
 		i++;
@@ -79,7 +79,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!joined)
 		return (NULL);
 	i = ft_strcpy_reti(joined, s1);
-	while (s2[k])
+	while (s2 && s2[k])
 	{
 		joined[i] = s2[k];
 		i++;
